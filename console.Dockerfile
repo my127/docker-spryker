@@ -10,6 +10,7 @@ RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
  && apt-get update -qq \
  && DEBIAN_FRONTEND=noninteractive apt-get -qq -y --no-install-recommends install \
   # package dependencies \
+    graphviz \
     postgresql-client \
   # clean \
  && apt-get auto-remove -qq -y \

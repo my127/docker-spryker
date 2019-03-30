@@ -14,6 +14,8 @@ Based on [my127/docker-php](https://github.com/my127/docker-php) with additional
 * readline
 * redis
 * soap
+#### System
+* graphviz
 ## Console
 ### Packages (additional)
 #### PHP
@@ -29,5 +31,6 @@ Based on [my127/docker-php](https://github.com/my127/docker-php) with additional
 * redis
 * soap
 #### System
-* redis-cli
+* graphviz
 * postgresql-client
+* redis-cli
