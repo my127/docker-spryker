@@ -1,0 +1,54 @@
+version: '3'
+services:
+
+  # Base Images
+
+  php71-fpm-stretch-base:
+    image: my127/spryker:7.1-fpm-stretch
+    build:
+      context: ./
+      dockerfile: base.Dockerfile
+      args:
+        VERSION: 7.1
+
+  php72-fpm-stretch-base:
+    image: my127/spryker:7.2-fpm-stretch
+    build:
+      context: ./
+      dockerfile: base.Dockerfile
+      args:
+        VERSION: 7.2
+
+  php73-fpm-stretch-base:
+    image: my127/spryker:7.3-fpm-stretch
+    build:
+      context: ./
+      dockerfile: base.Dockerfile
+      args:
+        VERSION: 7.3
+
+  # Console Images
+
+  php71-fpm-stretch-console:
+    image: my127/spryker:7.1-fpm-stretch-console
+    build:
+      context: ./
+      dockerfile: console.Dockerfile
+      args:
+        VERSION: 7.1
+
+  php72-fpm-stretch-console:
+    image: my127/spryker:7.2-fpm-stretch-console
+    build:
+      context: ./
+      dockerfile: console.Dockerfile
+      args:
+        VERSION: 7.2
+
+  php73-fpm-stretch-console:
+    image: my127/spryker:7.3-fpm-stretch-console
+    build:
+      context: ./
+      dockerfile: console.Dockerfile
+      args:
+        VERSION: 7.3
