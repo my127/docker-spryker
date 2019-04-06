@@ -20,17 +20,19 @@ RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
 # PHP: additional extensions
 # --------------------------
 RUN cd /root/installer; ./enable.sh \
+  bz2 \
   bcmath \
   curl \
   gd \
   gmp \
   intl \
   json \
-  pdo_pgsql \
   pgsql \
+  pdo_pgsql \
   readline \
   redis \
-  soap
+  soap \
+  sockets
 
  # Tool: redis-cli
 # ---------------
