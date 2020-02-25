@@ -12,6 +12,7 @@ RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
   # package dependencies \
     graphviz \
     postgresql-client \
+    procps \
   # clean \
  && apt-get auto-remove -qq -y \
  && apt-get clean \
