@@ -1,7 +1,7 @@
 ARG VERSION=7.3
 ARG BASEOS=stretch
 
-FROM my127/php:${VERSION}-fpm-stretch-${BASEOS}
+FROM my127/php:${VERSION}-fpm-${BASEOS}-console
 
 # System: additional packages
 # ----------------------------
