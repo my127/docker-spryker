@@ -28,8 +28,6 @@ RUN cd /root/installer; ./enable.sh \
   gmp \
   intl \
   json \
-  pgsql \
-  pdo_pgsql \
   readline \
   redis \
   soap \
