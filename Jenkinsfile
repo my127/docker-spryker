@@ -63,7 +63,7 @@ pipeline {
                 DOCKER_REGISTRY_CREDS = credentials('docker-registry-credentials')
             }
             when {
-                branch 'main'
+                branch 'master'
             }
             steps {
                 sh './manifest-push.sh'
