@@ -13,10 +13,17 @@ pipeline {
                         name 'BUILD'
                         values 'php71|php72', 'php73|php74'
                     }
+                    axis {
+                        name 'PLATFORM'
+                        values 'linux-amd64', 'linux-arm64'
+                    }
+                }
+                environment {
+                    TAG_SUFFIX = "-${PLATFORM}"
                 }
                 stages {
                     stage('Build, Test, Publish') {
-                        agent { label 'my127ws' }
+                        agent { label "${PLATFORM}" }
                         stages {
                             stage('Build') {
                                 steps {
@@ -47,6 +54,23 @@ pipeline {
                             }
                         }
                     }
+                }
+            }
+        }
+        stage('Publish main image') {
+            agent { label "linux-amd64" }
+            environment {
+                DOCKER_REGISTRY_CREDS = credentials('docker-registry-credentials')
+            }
+            when {
+                branch 'main'
+            }
+            steps {
+                sh './manifest-push.sh'
+            }
+            post {
+                always {
+                    cleanWs()
                 }
             }
         }
