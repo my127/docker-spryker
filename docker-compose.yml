@@ -48,6 +48,15 @@ services:
         VERSION: 7.4
         BASEOS: buster
 
+  php74-fpm-bullseye-base:
+    image: my127/spryker:7.4-fpm-bullseye${TAG_SUFFIX:-}
+    build:
+      context: ./
+      dockerfile: base.Dockerfile
+      args:
+        VERSION: 7.4
+        BASEOS: bullseye
+
   # Console Images
 
   php71-fpm-stretch-console:
@@ -95,3 +104,11 @@ services:
         VERSION: 7.4
         BASEOS: buster
 
+  php74-fpm-bullseye-console:
+    image: my127/spryker:7.4-fpm-bullseye-console${TAG_SUFFIX:-}
+    build:
+      context: ./
+      dockerfile: console.Dockerfile
+      args:
+        VERSION: 7.4
+        BASEOS: bullseye
