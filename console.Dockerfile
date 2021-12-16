@@ -14,6 +14,7 @@ RUN echo 'APT::Install-Recommends 0;' >> /etc/apt/apt.conf.d/01norecommends \
   # package dependencies \
     graphviz \
     procps \
+    $([ "$(uname -m)" = x86_64 ] || echo build-essential python) \ 
   # clean \
  && apt-get auto-remove -qq -y \
  && apt-get clean \
