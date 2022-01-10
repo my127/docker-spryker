@@ -7,7 +7,7 @@ services:
     image: my127/spryker:7.1-fpm-stretch${TAG_SUFFIX:-}
     build:
       context: ./
-      target: base
+      dockerfile: base.Dockerfile
       args:
         VERSION: 7.1
         BASEOS: stretch
@@ -16,7 +16,7 @@ services:
     image: my127/spryker:7.2-fpm-stretch${TAG_SUFFIX:-}
     build:
       context: ./
-      target: base
+      dockerfile: base.Dockerfile
       args:
         VERSION: 7.2
         BASEOS: stretch
@@ -25,7 +25,7 @@ services:
     image: my127/spryker:7.3-fpm-stretch${TAG_SUFFIX:-}
     build:
       context: ./
-      target: base
+      dockerfile: base.Dockerfile
       args:
         VERSION: 7.3
         BASEOS: stretch
@@ -34,7 +34,7 @@ services:
     image: my127/spryker:7.3-fpm-buster${TAG_SUFFIX:-}
     build:
       context: ./
-      target: base
+      dockerfile: base.Dockerfile
       args:
         VERSION: 7.3
         BASEOS: buster
@@ -43,7 +43,7 @@ services:
     image: my127/spryker:7.4-fpm-buster${TAG_SUFFIX:-}
     build:
       context: ./
-      target: base
+      dockerfile: base.Dockerfile
       args:
         VERSION: 7.4
         BASEOS: buster
@@ -52,7 +52,7 @@ services:
     image: my127/spryker:7.4-fpm-bullseye${TAG_SUFFIX:-}
     build:
       context: ./
-      target: base
+      dockerfile: base.Dockerfile
       args:
         VERSION: 7.4
         BASEOS: bullseye
@@ -61,7 +61,7 @@ services:
     image: my127/spryker:8.0-fpm-buster${TAG_SUFFIX:-}
     build:
       context: ./
-      target: base
+      dockerfile: base.Dockerfile
       args:
         VERSION: 8.0
         BASEOS: buster
@@ -70,7 +70,7 @@ services:
     image: my127/spryker:8.0-fpm-bullseye${TAG_SUFFIX:-}
     build:
       context: ./
-      target: base
+      dockerfile: base.Dockerfile
       args:
         VERSION: 8.0
         BASEOS: bullseye
@@ -81,7 +81,7 @@ services:
     image: my127/spryker:7.1-fpm-stretch-console${TAG_SUFFIX:-}
     build:
       context: ./
-      target: console
+      dockerfile: console.Dockerfile
       args:
         VERSION: 7.1
         BASEOS: stretch
@@ -90,7 +90,7 @@ services:
     image: my127/spryker:7.2-fpm-stretch-console${TAG_SUFFIX:-}
     build:
       context: ./
-      target: console
+      dockerfile: console.Dockerfile
       args:
         VERSION: 7.2
         BASEOS: stretch
@@ -99,7 +99,7 @@ services:
     image: my127/spryker:7.3-fpm-stretch-console${TAG_SUFFIX:-}
     build:
       context: ./
-      target: console
+      dockerfile: console.Dockerfile
       args:
         VERSION: 7.3
         BASEOS: stretch
@@ -108,7 +108,7 @@ services:
     image: my127/spryker:7.3-fpm-buster-console${TAG_SUFFIX:-}
     build:
       context: ./
-      target: console
+      dockerfile: console.Dockerfile
       args:
         VERSION: 7.3
         BASEOS: buster
@@ -117,7 +117,7 @@ services:
     image: my127/spryker:7.4-fpm-buster-console${TAG_SUFFIX:-}
     build:
       context: ./
-      target: console
+      dockerfile: console.Dockerfile
       args:
         VERSION: 7.4
         BASEOS: buster
@@ -126,7 +126,7 @@ services:
     image: my127/spryker:7.4-fpm-bullseye-console${TAG_SUFFIX:-}
     build:
       context: ./
-      target: console
+      dockerfile: console.Dockerfile
       args:
         VERSION: 7.4
         BASEOS: bullseye
@@ -135,7 +135,7 @@ services:
     image: my127/spryker:8.0-fpm-buster-console${TAG_SUFFIX:-}
     build:
       context: ./
-      target: console
+      dockerfile: console.Dockerfile
       args:
         VERSION: 8.0
         BASEOS: buster
@@ -146,7 +146,7 @@ services:
     image: my127/spryker:8.0-fpm-bullseye-console${TAG_SUFFIX:-}
     build:
       context: ./
-      target: console
+      dockerfile: console.Dockerfile
       args:
         VERSION: 8.0
         BASEOS: bullseye
