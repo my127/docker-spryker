@@ -84,6 +84,15 @@ services:
         VERSION: 8.1
         BASEOS: bullseye
 
+  php82-fpm-bullseye-base:
+    image: my127/spryker:8.2-fpm-bullseye${TAG_SUFFIX:-}
+    build:
+      context: ./
+      dockerfile: base.Dockerfile
+      args:
+        VERSION: 8.2
+        BASEOS: bullseye
+
   # Console Images
 
   php71-fpm-stretch-console:
@@ -172,3 +181,14 @@ services:
         BASEOS: bullseye
     depends_on:
       - php81-fpm-bullseye-base
+
+  php82-fpm-bullseye-console:
+    image: my127/spryker:8.2-fpm-bullseye-console${TAG_SUFFIX:-}
+    build:
+      context: ./
+      dockerfile: console.Dockerfile
+      args:
+        VERSION: 8.2
+        BASEOS: bullseye
+    depends_on:
+      - php82-fpm-bullseye-base
