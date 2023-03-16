@@ -4,7 +4,7 @@ pipeline {
         buildDiscarder(logRotator(daysToKeepStr: '30'))
         parallelsAlwaysFailFast()
     }
-    triggers { cron(env.BRANCH_NAME ==~ /^master$/ ? 'H H(0-6) 1 * *' : '') }
+    triggers { cron(env.BRANCH_NAME ==~ /^main$/ ? 'H H(0-6) 1 * *' : '') }
     stages {
         stage('Matrix') {
             matrix {
@@ -63,7 +63,7 @@ pipeline {
                 DOCKER_REGISTRY_CREDS = credentials('docker-registry-credentials')
             }
             when {
-                branch 'master'
+                branch 'main'
             }
             steps {
                 sh './manifest-push.sh'
