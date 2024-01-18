@@ -93,6 +93,15 @@ services:
         VERSION: 8.2
         BASEOS: bullseye
 
+  php83-fpm-bookworm-base:
+    image: my127/spryker:8.3-fpm-bookworm${TAG_SUFFIX:-}
+    build:
+      context: ./
+      dockerfile: base.Dockerfile
+      args:
+        VERSION: 8.3
+        BASEOS: bookworm
+
   # Console Images
 
   php71-fpm-stretch-console:
@@ -192,3 +201,14 @@ services:
         BASEOS: bullseye
     depends_on:
       - php82-fpm-bullseye-base
+
+  php83-fpm-bookworm-console:
+    image: my127/spryker:8.3-fpm-bookworm-console${TAG_SUFFIX:-}
+    build:
+      context: ./
+      dockerfile: console.Dockerfile
+      args:
+        VERSION: 8.3
+        BASEOS: bookworm
+    depends_on:
+      - php83-fpm-bookworm-base
