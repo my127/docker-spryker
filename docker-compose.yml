@@ -3,33 +3,6 @@ services:
 
   # Base Images
 
-  php71-fpm-stretch-base:
-    image: my127/spryker:7.1-fpm-stretch${TAG_SUFFIX:-}
-    build:
-      context: ./
-      dockerfile: base.Dockerfile
-      args:
-        VERSION: 7.1
-        BASEOS: stretch
-
-  php72-fpm-stretch-base:
-    image: my127/spryker:7.2-fpm-stretch${TAG_SUFFIX:-}
-    build:
-      context: ./
-      dockerfile: base.Dockerfile
-      args:
-        VERSION: 7.2
-        BASEOS: stretch
-
-  php73-fpm-stretch-base:
-    image: my127/spryker:7.3-fpm-stretch${TAG_SUFFIX:-}
-    build:
-      context: ./
-      dockerfile: base.Dockerfile
-      args:
-        VERSION: 7.3
-        BASEOS: stretch
-
   php73-fpm-buster-base:
     image: my127/spryker:7.3-fpm-buster${TAG_SUFFIX:-}
     build:
@@ -94,33 +67,6 @@ services:
         BASEOS: bullseye
 
   # Console Images
-
-  php71-fpm-stretch-console:
-    image: my127/spryker:7.1-fpm-stretch-console${TAG_SUFFIX:-}
-    build:
-      context: ./
-      dockerfile: console.Dockerfile
-      args:
-        VERSION: 7.1
-        BASEOS: stretch
-
-  php72-fpm-stretch-console:
-    image: my127/spryker:7.2-fpm-stretch-console${TAG_SUFFIX:-}
-    build:
-      context: ./
-      dockerfile: console.Dockerfile
-      args:
-        VERSION: 7.2
-        BASEOS: stretch
-
-  php73-fpm-stretch-console:
-    image: my127/spryker:7.3-fpm-stretch-console${TAG_SUFFIX:-}
-    build:
-      context: ./
-      dockerfile: console.Dockerfile
-      args:
-        VERSION: 7.3
-        BASEOS: stretch
 
   php73-fpm-buster-console:
     image: my127/spryker:7.3-fpm-buster-console${TAG_SUFFIX:-}
